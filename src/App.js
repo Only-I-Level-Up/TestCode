@@ -8,8 +8,22 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h3 data-testid="counter">{count}</h3>
-        <buttin data-testid="minus-button">-</buttin>
-        <buttin data-testid="plus-button">+</buttin>
+        <buttin
+          data-testid="minus-button"
+          onClick={() => {
+            setCount(count - 1);
+          }}
+        >
+          -
+        </buttin>
+        <buttin
+          data-testid="plus-button"
+          onClick={() => {
+            setCount(count + 1);
+          }}
+        >
+          +
+        </buttin>
       </header>
     </div>
   );
